@@ -7,35 +7,65 @@ public class ConversorDeNumeroRomanoTest {
     
     @Test
     public void deveEntenderOSimboloI() {
-        // Arrange
         ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
     
-        // Act
         int numero = romano.converte("I");
 
-        // Assert
         assertEquals(1, numero);
     }
     
     @Test
-    public void deveEntenderOSimboloV() {
-        // Arrange
+    public void deveEntenderOSimboloV() {        
         ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
     
-        // Act
         int numero = romano.converte("V");
 
-        // Assert
         assertEquals(5, numero);
     }
     
-    // TODO X
+    @Test
+    public void deveEntenderOSimboloX() {
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
     
-    // TODO L
+        int numero = romano.converte("X");
+
+        assertEquals(10, numero);
+    }
     
-    // TODO C
+    @Test
+    public void deveEntenderOSimboloL() {
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
     
-    // TODO D
+        int numero = romano.converte("L");
+
+        assertEquals(50, numero);
+    }
     
-    // TODO M
+    @Test
+    public void deveEntenderOSimboloC() {
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+    
+        int numero = romano.converte("C");
+
+        assertEquals(100, numero);
+    }
+    
+    @Test
+    public void deveEntenderOSimboloD() {
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+    
+        int numero = romano.converte("D");
+
+        assertEquals(500, numero);
+    }
+    
+    @Test
+    public void deveEntenderOSimboloM() {
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+    
+        int numero = romano.converte("M");
+
+        assertEquals(1000, numero);
+    }
+
 }
