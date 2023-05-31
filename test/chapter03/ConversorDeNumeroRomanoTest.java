@@ -68,4 +68,30 @@ public class ConversorDeNumeroRomanoTest {
         assertEquals(1000, numero);
     }
 
+    @Test
+    public void deveEntenderQuatroSimbolosDoisADoisComoXXII() {
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+    
+        int numero = romano.converte("XXII");
+
+        assertEquals(22, numero);
+    }
+    
+    @Test
+    public void deveEntenderCincoSimbolosComoXXVII() {
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+    
+        int numero = romano.converte("XXVII");
+
+        assertEquals(27, numero);
+    }
+    
+    @Test
+    public void deveEntenderSimbolosGrandesComoCCCXXVII() {
+        ConversorDeNumeroRomano romano = new ConversorDeNumeroRomano();
+    
+        int numero = romano.converte("CCCXXVII");
+
+        assertEquals(327, numero);
+    }
 }
