@@ -7,32 +7,34 @@ import org.junit.Before;
 
 public class CarrinhoDeComprasTest {
     
-    private CarrinhoDeCompras carrinho;
+    private CarrinhoDeComprasBuilder carrinhoBuilder;
     
     @Before
     public void inicializa() {
-        this.carrinho = new CarrinhoDeCompras();
+        this.carrinhoBuilder = new CarrinhoDeComprasBuilder();
     }
     
     @Test
     public void deveRetornarZeroSeCarrinhoVazio() {
-        assertEquals(0.0, carrinho.maiorValor(), 0.0001);
+        assertEquals(0.0, carrinhoBuilder.cria().maiorValor(), 0.0001);
     }
     
     @Test
     public void deveRetornarValorDoItemSeCarrinhoCom1Elemento() {
-        carrinho.adiciona(new Item("Geladeira", 1, 900.0));
-        
-        assertEquals(900.0, carrinho.maiorValor(), 0.0001);
+        assertEquals(
+            900.0, 
+            carrinhoBuilder.comItens(900.0).cria().maiorValor(), 
+            0.0001
+        );
     }
     
     @Test
     public void 
     deveRetornarMaiorValorSeCarrinhoContemMuitosElementos() {
-        carrinho.adiciona(new Item("Geladeira", 1, 900.0));
-        carrinho.adiciona(new Item("Fogão", 1, 1500.0));
-        carrinho.adiciona(new Item("Máquina de Lavar", 1, 750.0));
-
-        assertEquals(1500.0, carrinho.maiorValor(), 0.0001);
+        assertEquals(
+            1500.0, 
+            carrinhoBuilder.comItens(900.0, 1500.0, 750.0).cria().maiorValor(), 
+            0.0001
+        );
     }
 }
