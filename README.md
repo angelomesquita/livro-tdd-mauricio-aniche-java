@@ -11,3 +11,4 @@ Repositório dos códigos do livro Test-Driven Development: Teste e Design no Mu
 - [Capítulo 04 - Simplicidade e Baby Steps](https://github.com/angelomesquita/livro-tdd-mauricio-aniche-java/tree/chapter-04)
 - [Capítulo 05 - TDD E Design de Classes](https://github.com/angelomesquita/livro-tdd-mauricio-aniche-java/tree/chapter-05)
 - [Capítulo 06 - Qualidade no código do teste](https://github.com/angelomesquita/livro-tdd-mauricio-aniche-java/tree/chapter-06)
+- [Capítulo 07 - TDD e a coesão](https://github.com/angelomesquita/livro-tdd-mauricio-aniche-java/tree/chapter-07)
