@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 
 public class CalculadoraDeSalarioTest {
     
-    
     @Test
     public void 
     deveCalcularSalarioParaDesenvolvedoresComSalarioAbaixoDoLimite() {
